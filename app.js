@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("addProductBtn").addEventListener("click", () => {
         document.getElementById("productForm").reset();
         document.getElementById("productId").value = "";
-        document.getElementById("modalLabel").textContent = "Añadir Producto";
+        document.getElementById("modalLabel").textContent = "Añadir producto";
         new bootstrap.Modal(document.getElementById("productModal")).show();
     });
 
