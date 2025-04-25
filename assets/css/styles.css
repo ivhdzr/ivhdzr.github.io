@@ -6,7 +6,8 @@
     --g-color: #888;
     --accent-color: rgba(252, 70, 107, 1);
     --accent-color-2: rgba(63, 94, 251, 1);
-}   
+    --bg-rgw-3: rgba(255, 255, 255, 0.3);
+}
 
 body {
     margin: 0 auto;
@@ -82,7 +83,7 @@ body {
 
 button.circle-btn {
     border: none;
-    outline:0;
+    outline: 0;
     font-family: inherit;
 }
 
@@ -99,12 +100,10 @@ button.circle-btn {
     border: none;
 }
 
-/* Efecto al pasar el mouse */
 .circle-btn:hover {
     box-shadow: 0 2px 5px var(--g-color);
 }
 
-/* Tooltip personalizado */
 .circle-btn::after {
     display: block;
     top: 55px;
@@ -113,11 +112,10 @@ button.circle-btn {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
-/* Mostrar tooltip al hover */
 .circle-btn:hover::after {
     opacity: 1;
 }
@@ -145,4 +143,75 @@ button.circle-btn {
 
 .ct-pad-20 {
     padding: 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-inf {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--g-color);
+}
+
+.card-inf .title-card {
+    width: 100%;
+    background: var(--accent-color-2);
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+.card-inf .content-card {
+    padding: 5px 0 5px 0;
+}
+
+.cl-content {
+    width: 100%;
+}
+
+.cl-content img {
+    width: 50px;
+    height: auto;
+    transform: scale(0.6);
+}
+
+.cl-content span {
+    display: block;
+    text-align: center;
+}
+
+.cl-content .cl-content-radimg {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-radius: 25px;
+    text-align: center;
+    background-color: var(--bg-rgw-3);
+}
+
+.grid-display {
+    width: 100%;
+    display: grid;
+}
+
+.gr-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
