@@ -1,3 +1,5 @@
+AOS.init();
+
 const btnSection = document.querySelector("#btn_section");
 
 btnSection.addEventListener("click", (e) => {

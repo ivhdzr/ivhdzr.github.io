@@ -7,6 +7,7 @@
     --accent-color: rgba(252, 70, 107, 1);
     --accent-color-2: rgba(63, 94, 251, 1);
     --bg-rgw-3: rgba(255, 255, 255, 0.3);
+    --bg-rgw-4: rgba(255, 255, 255, 0.4)
 }
 
 body {
@@ -112,7 +113,6 @@ button.circle-btn {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -137,6 +137,14 @@ button.circle-btn {
     margin-top: 20px;
 }
 
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
 .tx-center {
     text-align: center;
 }
@@ -151,34 +159,22 @@ button.circle-btn {
     gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .card-inf {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid var(--g-color);
+    border: 1px solid var(--bg-rgw-3);
 }
 
 .card-inf .title-card {
     width: 100%;
     background: var(--accent-color-2);
     text-align: center;
-    padding: 5px 0 5px 0;
+    padding: 7px 0 7px 0;
 }
 
 .card-inf .content-card {
-    padding: 5px 0 5px 0;
+    padding: 10px;
 }
 
 .cl-content {
@@ -197,6 +193,7 @@ button.circle-btn {
 }
 
 .cl-content .cl-content-radimg {
+    transition: box-shadow 0.2s;
     width: 50px;
     height: 50px;
     display: flex;
@@ -207,6 +204,10 @@ button.circle-btn {
     background-color: var(--bg-rgw-3);
 }
 
+.cl-content .cl-content-radimg:hover {
+    box-shadow: 0 2px 5px var(--g-color);
+}
+
 .grid-display {
     width: 100%;
     display: grid;
@@ -214,4 +215,21 @@ button.circle-btn {
 
 .gr-4 {
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+@media screen and (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    
 }
