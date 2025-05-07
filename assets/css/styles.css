@@ -6,8 +6,31 @@
     --g-color: #888;
     --accent-color: rgba(252, 70, 107, 1);
     --accent-color-2: rgba(63, 94, 251, 1);
+
+    --accent-color-low: #fc6584;
+    --accent-color-mlow: #fc728e;
+
+    --accent-color-2-low: #647dfa;
+    --accent-color-2-mlow: #7087fa;
+
+    --bg-rgw-2: rgba(255, 255, 255, 0.2);
     --bg-rgw-3: rgba(255, 255, 255, 0.3);
-    --bg-rgw-4: rgba(255, 255, 255, 0.4)
+    --bg-rgw-4: rgba(255, 255, 255, 0.4);
+
+    --bg-rgbl-2: rgba(0, 0, 0, 0.2);
+    --bg-rgbl-3: rgba(0, 0, 0, 0.3);
+    --bg-rgbl-4: rgba(0, 0, 0, 0.4);
+    --bg-rgbl-5: rgba(0, 0, 0, 0.5);
+    --bg-rgbl-6: rgba(0, 0, 0, 0.6);
+    --bg-rgbl-7: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,6 +41,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 .flx {
@@ -30,10 +54,20 @@ body {
     flex-direction: column;
 }
 
+.flx-inline {
+    display: inline-flex;
+}
+
+.flx-i-center {
+    justify-content: center;
+    align-items: center;
+}
+
 .container-main {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    overflow: hidden;
 }
 
 .hero {
@@ -49,6 +83,7 @@ body {
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 1px;
 }
 
 .gradient-tx {
@@ -145,6 +180,30 @@ button.circle-btn {
     margin-bottom: 20px;
 }
 
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.mb-6 {
+    margin-bottom: 60px;
+}
+
+.mb-7 {
+    margin-bottom: 70px;
+}
+
+.mb-8 {
+    margin-bottom: 80px;
+}
+
 .tx-center {
     text-align: center;
 }
@@ -170,7 +229,7 @@ button.circle-btn {
     width: 100%;
     background: var(--accent-color-2);
     text-align: center;
-    padding: 7px 0 7px 0;
+    padding: 8px 0 8px 0;
 }
 
 .card-inf .content-card {
@@ -218,12 +277,121 @@ button.circle-btn {
     gap: 10px
 }
 
+.gr-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px
+}
+
+.gr-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px
+}
+
+.card-pr {
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid var(--g-color);
+}
+
+.card-pr-imgcontent {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.card-pr-imgcontent:hover {
+    transform: scale(1.05);
+}
+
+.content-img {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-rgw-2);
+}
+
+.content-img .content-badge {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.content-img .content-badge .badge {
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    margin: 2px;
+    background-color: var(--bg-rgbl-6);
+    border-radius: 30px;
+}
+
+.content-img .content-badge .badge-g {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    margin: 2px;
+    background-color: var(--accent-color-2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    transition: box-shadow 0.2s;
+}
+
+.content-img .content-badge .badge-g:hover {
+    box-shadow: 0 2px 5px var(--bg-rgw-4);
+}
+
+.card-pr .card-pr-title {
+    padding: 8px;
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+.card-pr .card-pr-desc {
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.go-top {
+    cursor: pointer;
+    position: fixed;
+    transform: scale(0);
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color-2);
+    color: #fff;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--bg-rgw-3);
+    border-radius: 25px;
+    z-index: 100;
+}
+
+.go-top:hover {
+    background-color: var(--accent-color-2-low);
+    box-shadow: 0 2px 5px var(--bg-rgw-4);
+}
+
+.transcale {
+    transform: scale(1);
+}
+
 @media screen and (max-width: 768px) {
     .content-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    
+    .resp-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -231,5 +399,12 @@ button.circle-btn {
         grid-template-columns: 1fr;
     }
 
-    
+    .resp-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .resp-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }

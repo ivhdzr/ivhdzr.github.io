@@ -16,7 +16,7 @@
 
 <body>
     <main class="container-main">
-        <section class="flx flx-center hero">
+        <section class="flx flx-center hero" id="hero">
             <h1 class="gradient-tx ff-cal-sans-regular" data-aos="zoom-in">
                 Iván HR
             </h1>
@@ -47,6 +47,13 @@
                             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
                     </svg>
                 </button>
+                <button class="flx flx-center circle-btn" name="tiktok" tooltip="TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                    </svg>
+                </button>
                 <button class="flx flx-center circle-btn" name="cv" tooltip="Currículum Vitae">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-file-earmark-text" viewBox="0 0 16 16">
@@ -59,7 +66,7 @@
             </div>
         </section>
 
-        <section class="cont mt-2 mb-2" data-aos="fade-up">
+        <section class="cont mt-2 mb-2" data-aos="fade-up" id="habilidades_tecnicas">
             <div class="ct-pad-20">
                 <h2 class="gradient-stx ff-cal-sans-regular tx-center">
                     Habilidades técnicas
@@ -168,7 +175,147 @@
             </div>
         </section>
 
+        <section class="cont mt-2 mb-8" data-aos="fade-up" id="portafolio">
+            <div class="ct-pad-20">
+                <h2 class="gradient-stx ff-cal-sans-regular tx-center">
+                    Portafolio
+                </h2>
+            </div>
+            <div class="grid-display gr-3 resp-3">
+
+                <div class="card-pr" data-aos="fade-right">
+                    <div class="content-img">
+                        <img class="card-pr-imgcontent" src="assets/img/admintr.png">
+                        <div class="content-badge">
+                            <div class="badge">
+                                HTML
+                            </div>
+                            <div class="badge">
+                                CSS
+                            </div>
+                            <div class="badge">
+                                JS
+                            </div>
+                            <div class="badge">
+                                PHP
+                            </div>
+                            <div class="badge">
+                                MySQL
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-pr-title ff-cal-sans-regular">
+                        Aplicación Web SISAR
+                    </div>
+                    <div class="card-pr-desc">
+                        SISAR es una solución diseñada para generar Cartas de Porte en el sector del autotransporte.
+                        Además, permite gestionar de manera eficiente clientes, operadores y rutas de traslado,
+                        optimizando así la operación logística.
+                        <!--SISAR es un sistema capaz de generar Cartas de Porte para el sector del autotransporte. No sólo
+                        eso, sino que también es una forma eficiente de controlar clientes, operadores y rutas de
+                        traslado.-->
+                    </div>
+                </div>
+
+                <div class="card-pr" data-aos="fade-up">
+                    <div class="content-img">
+                        <img class="card-pr-imgcontent" src="assets/img/tikscrap.png">
+                        <div class="content-badge">
+                            <div class="badge">
+                                HTML
+                            </div>
+                            <div class="badge">
+                                CSS
+                            </div>
+                            <div class="badge">
+                                JS
+                            </div>
+
+                            <a href="https://github.com/tkbanw/tkbanw.github.io" target="_blank" class="badge-g"
+                                title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                </svg>
+                            </a>
+
+                            <a href="https://tkbanw.github.io" target="_blank" class="badge-g" title="Ir">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fill-rule="evenodd"
+                                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card-pr-title ff-cal-sans-regular">
+                        Aplicación Web TikScrap
+                    </div>
+                    <div class="card-pr-desc">
+                        TikScrap es una aplicación web que permite acceder a datos de cuentas de TikTok que normalmente
+                        no están disponibles públicamente. A través del consumo de una API, proporciona información como
+                        la fecha de creación de la cuenta, cantidad de seguidores y otros datos relevantes.
+                        <!--TikScrap te permite obtener datos de cuentas de TikTok que normalmente están ocultos. La
+                        aplicación web consume una API de TikTok que proporciona información como la fecha en que se
+                        creó una
+                        cuenta, además de la cantidad de seguidores y otros datos.-->
+                    </div>
+                </div>
+
+                <div class="card-pr" data-aos="fade-left">
+                    <div class="content-img">
+                        <img class="card-pr-imgcontent" src="assets/img/apilumen.png">
+                        <div class="content-badge">
+                            <div class="badge">
+                                Laravel Lumen
+                            </div>
+                            <div class="badge">
+                                MySQL
+                            </div>
+
+                            <a href="https://github.com/ivhdzr/apiProyectos" target="_blank" class="badge-g"
+                                title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                </svg>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card-pr-title ff-cal-sans-regular">
+                        API REST para Gestionar Proyectos
+                    </div>
+                    <div class="card-pr-desc">
+                        La API REST fue desarrollada para ser consumida por aplicaciones web y móviles. Facilita la
+                        asignación de proyectos y tareas colaborativas entre usuarios, e incluye validación de datos,
+                        autenticación mediante JWT y enrutamiento dinámico.
+                        <!--La API REST fue desarrollada con el fin de ser consumida desde un cliente de aplicación web y aplicación móvil, permite asignar proyectos y tareas colaborativas entre usuarios, integra validación de datos, middleware JWT y enrutado dinámico.-->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
     </main>
+
+    <button class="flx flx-center go-top" id="btn_top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg>
+    </button>
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>

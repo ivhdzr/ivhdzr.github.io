@@ -1,6 +1,7 @@
 AOS.init();
 
 const btnSection = document.querySelector("#btn_section");
+const btnTop = document.querySelector("#btn_top");
 
 btnSection.addEventListener("click", (e) => {
     // Encontrar el botón más cercano al clic, si existe
@@ -21,6 +22,10 @@ btnSection.addEventListener("click", (e) => {
                 window.open("https://github.com/ivhdzr", "_blank");
                 break;
 
+            case "tiktok":
+                window.open("https://tiktok.com/@codivan", "_blank");
+                break;
+
             case "cv":
                 window.open("assets/docs/cv2025.pdf", "_blank");
                 break;
@@ -29,3 +34,16 @@ btnSection.addEventListener("click", (e) => {
         console.log("Clic fuera de los botones");
     }
 });
+
+window.addEventListener("scroll", function () {
+    window.scrollY > 100 ?
+        btnTop.classList.add("transcale") :
+        btnTop.classList.remove("transcale");
+});
+
+btnTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+    });
+});
+
