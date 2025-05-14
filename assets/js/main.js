@@ -31,7 +31,13 @@ btnSection.addEventListener("click", (e) => {
                 break;
 
             case "cv":
-                window.open("assets/docs/cv2025.pdf", "_blank");
+                showAlert({
+                    title: "En proceso",
+                    text: "Pronto estará disponible",
+                    icon: "info",
+                    timer: 5000
+                });
+                //window.open("assets/docs/cv2025.pdf", "_blank");
                 break;
         }
     } else {
