@@ -31,17 +31,9 @@ btnSection.addEventListener("click", (e) => {
                 break;
 
             case "cv":
-                showAlert({
-                    title: "En proceso",
-                    text: "Pronto estará disponible",
-                    icon: "info",
-                    timer: 5000
-                });
-                //window.open("assets/docs/cv2025.pdf", "_blank");
+                window.open("assets/docs/CV_Ivan_HR.pdf", "_blank");
                 break;
         }
-    } else {
-        console.log("Clic fuera de los botones");
     }
 });
 
@@ -142,6 +134,7 @@ const genera = () => {
                                 <ul class="options">
                                     <li data-value="Página o sitio web">Página o sitio web</li>
                                     <li data-value="Aplicación web">Aplicación web</li>
+                                    <li data-value="Aplicación móvil">Aplicación móvil</li>
                                     <li data-value="API">API</li>
                                     <li data-value="Consultoría">Consultoría</li>
                                     <li data-value="Otro">Otro</li>
@@ -267,6 +260,10 @@ const genera = () => {
         }
 
         // Envío si no hay errores
+        const loader = document.createElement("div");
+        loader.className = "overlay-m";
+        loader.innerHTML = `<div class="loader"></div>`;
+        document.body.appendChild(loader);
         respuestaEl.classList.add("bcolor");
         respuestaEl.disabled = true;
         respuestaEl.textContent = "Enviando...";
@@ -319,6 +316,8 @@ const genera = () => {
             });
             console.error(err);
         } finally {
+            loader.classList.add("overlay-anim");
+            loader.addEventListener("animationend", () => loader.remove(), { once: true });
             respuestaEl.classList.remove("bcolor");
             respuestaEl.disabled = false;
             respuestaEl.textContent = "Enviar";
